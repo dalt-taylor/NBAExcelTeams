@@ -6,7 +6,7 @@ jar {
     archivesBaseName = "NBA-Excel"
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
-        attributes "Main-class": "edu.virginia.cs.nbateams.Main"
+        attributes "NBADivision": "edu.virginia.cs.nbateams.Division"
     }
 
     from {
@@ -15,7 +15,7 @@ jar {
 }
 
 group 'edu.virginia.cs.nbateams'
-version '1.1'
+version '1.6'
 
 repositories {
     mavenCentral()
@@ -24,7 +24,8 @@ repositories {
 dependencies {
     implementation group: 'org.json', name: 'json', version: '20220320'
 
-    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2', 'org.apache.poi:poi:5.2.3'
+
     runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.18.0'
 
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.7.0'
